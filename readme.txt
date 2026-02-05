@@ -25,8 +25,7 @@ git clone https://github.com/Habsida-Projects/webpack-static-template
 rm -rf .git
 ```
 
-The existing .git folder is linked to the repository from which you cloned the project. You’ll need to create a new .git folder that links to your own repository.
-
+The old .git folder contains a link to the repository you cloned the project from. You will create a new .git folder with a link to your own repository.
 ---
 
 ## If Creating a New Project on github.com
@@ -34,7 +33,7 @@ The existing .git folder is linked to the repository from which you cloned the p
 You need to initialize a new Git repository. _If this command fails, it may be because your Git version is outdated, and you will need to update it._
 
 ```properties
-git init -b main 
+git init -b main
 ```
 
 Add all changes and make the initial commit:
