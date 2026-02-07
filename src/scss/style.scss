@@ -1,17 +1,17 @@
-$bgColor: #24292e;
-$text: #fff;
+$bgColor: #FFFFFF;
+$text: #1B1C21;
 
 @font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.woff') format('truetype');
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
 }
 
 body {
   padding: 1rem;
   margin: 0;
-  font-family: Comic, sans-serif;
+  font-family: 'TT Lakes', sans-serif;
   background-color: $bgColor;
   color: $text;
 }
