@@ -1,36 +1,26 @@
 
 .service-page{
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     min-height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: "TT Lakes Neue", sans-serif;
-    background:#FFFFFF;
-}
-.service-page__header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: $color-white;
+
+&__header{
+    @include flex-space-between;
     padding: 10px 15px;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #80949F;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-logo;
     position: sticky;
     top: 0;
     z-index: 10;
 }
-    
-.service-page__menu-btn{
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #FF3E79;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+
+&__menu-btn{
+    @include button-styles;
 }
 
-.service-page__logo{
+&__logo{
     position: relative;
 }
 .service-page__btn-wrapper{
@@ -47,37 +37,23 @@
     vertical-align: middle; 
     border-radius: 1px;
     }
-.service-page__service-btn{
-    /* display: block; */
-    width: 40px;
-    height: 40px;
-    background-color: #FF3E79;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+&__service-btn,
+&__checkstatus-btn{
+    @include button-styles;
 }
 
-.service-page__checkstatus-btn{
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #FF3E79;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.service-page__menu{
+&__menu{
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
 }
-.service-page__menu-wrapper{
+&__menu-wrapper{
     display: flex;
     gap: 8px;
     min-width: max-content;
 }
 
-.mobile-menu__item{
+.service-page__menu-item{
     width: 246px;
     height: 40px;
     top: 176px;
@@ -102,7 +78,7 @@
     line-height: 1.5;
 }
 
-.services__readmore{
+.service-page__readmore{
     display: inline-flex;
     align-items: center;
     gap: 4px;

@@ -1,89 +1,112 @@
 
-
 .service-price {
-    padding: 16px 0;
-    background: #F8F8F8;
-    font-family: "TT Lakes", sans-serif;
+    padding: $spacing-sm 0;
+    background: $color-bg;
+
+    @include respond-to(tablet) {
+        padding: $spacing-md;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: $spacing-lg;
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 1440px;
+        margin: 0 auto;
 }
 
-.service-price__head {
-    padding: 0 16px;
-    margin-bottom: 16px;
+&__head {
+    padding: 0 $spacing-sm;
+    margin-bottom: $spacing-sm;
+
+    @include respond-to(tablet) {
+        padding: 0;
+        margin-bottom: $spacing-md;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: $spacing-lg;
+    }
 }
 
-.service-price__title {
-    font-size: 16px;
-    font-weight: normal;
+&__title {
     line-height: 24px;
-    letter-spacing: -0.2px;
     margin: 0;
     text-transform: uppercase;
-    color: #7E7E82;
-    background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
-    padding: 16px;
-    margin: 0 -16px 16px;
+    color: $color-text-secondary;
+    background: linear-gradient(to right, $color-bg 0%, $color-white 98.61%);
+    padding: $spacing-sm;
+    margin: 0 -(-$spacing-sm) $spacing-sm;
+
+    @include respond-to(tablet) {
+        padding: $spacing-sm $spacing-md;
+        margin: 0 (-$spacing-md) $spacing-md;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: $spacing-sm $spacing-lg;
+        margin: 0 (-$spacing-lg) $spacing-lg;
+    }
 }
 
 
-.service-price__slider {
+&__slider {
     overflow: hidden;
     padding: 0 16px;
+
+     @include respond-to(tablet) {
+        display: none;
+    }
 }
 
-.service-price__list {
+&__list {
     display: flex;
 }
 
-.service-price__card {
-    display: flex;
-    flex-direction: column;
-    width: 260px;
+&__card {
+    @include flex-column;
+    width: 240px;
     padding: 16px;
-    background: #FFFFFF;
+    background: $color-white;
     border-radius: 6px;
     box-sizing: border-box;
 }
 
-.service-price__card-title {
-    font-size: 14px;
-    font-weight: normal;
+&__card-title {
+    font-size: $font-size-small;
+    font-weight: 400;
     line-height: 18px;
-    color: #7E7E82;
+    color: $color-text-secondary;
     margin: 0 0 12px 0;
     padding-bottom: 12px;
-    border-bottom: 1px solid #EAEAEA;
+    border-bottom: 1px solid $color-border;
 }
 
-.service-price__card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 16px;
+&__card-info {
+    @include flex-column;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
 }
 
-.service-price__card-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+&__card-row {
+    @include flex-space-between
 }
 
 .service-price__card-label {
-    font-size: 14px;
+    @include footer-text-style;
     line-height: 16px;
-    color: #7E7E82;
 }
 
 .service-price__card-value {
-    font-size: 14px;
+    font-size: $font-size-small;
     line-height: 18px;
-    color: #1B1C21;
+    
 }
 
-/* Кнопка */
 .service-price__button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-space-between;
+
     width: 119px;
     height: 32px;
     padding: 4px 12px 4px 16px;
@@ -124,20 +147,13 @@
 }
 
 .swiper-pagination {
-    margin-top: 16px;
-    position: static;
+    @include swiper-pagination-container;
 }
 
 .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #DDDDDD;
-    opacity: 1;
+    @include swiper-pagination-bullet;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #B5B6BC;
-}
 
 .service-price__table {
     display: none;

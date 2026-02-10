@@ -1,10 +1,13 @@
 $color-white: #FFFFFF;
 $color-bg: #F8F8F8;
+$color-pagination: #DDDDDD;
+$color-pagination-active: #B5B6BC;
 $color-border: #EAEAEA; 
 $color-text: #1B1C21;
 $color-accent:#B8FFEC;//
 $color-button:#FF3E79; //часть кнопок на странице с таким bg, часть с белым
 $color-text-secondary: #7E7E82; // цвет текста на активных элементах
+$color-logo:  #80949F;
 
 $font-family: 'TT Lakes', sans-serif;
 $font-size-large: 28px;
@@ -13,7 +16,7 @@ $font-size-small: 14px;
 
 $mobile: 320px;
 $tablet: 768px;
-$desktop: 1120px; // тут нужно будет попроавить разрешение
+$desktop: 1440px; // тут нужно будет попроавить разрешение
 
 
 $spacing-xs: 8px;

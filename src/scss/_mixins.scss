@@ -1,0 +1,161 @@
+@use "variables" as *;
+
+
+@mixin flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-space-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@mixin footer-text-style{
+  font-size: $font-size-small;
+  color:$color-text-secondary;
+}
+
+
+
+@mixin button-styles($size: 40px){
+  width: $size;
+  height: $size;
+  background-color: $color-button;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: filter 0.3s, opacity 0.3s;
+
+  &:hover{
+    filter: brightness(0.8);
+    opacity: 0.7;
+  }
+}
+
+@mixin white-button-style{
+  @include flex-center();
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  background-color: $color-bg;
+  border: 2px solid $color-button;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@mixin item-style {
+    @include flex-space-between;
+    width: 240px;
+    padding: $spacing-sm $spacing-md;
+    background-color: $color-white;
+    border-radius: 6px;
+    border: 1px solid $color-border;
+    box-sizing: border-box;
+
+    @media (min-width: 431px) and (max-width: 768px) {
+    width: calc(33.333% - 11px);
+    }
+    @include respond-to(tablet) {
+        width: calc(25% - 12px);
+    }
+    &.swiper-slide {
+        @include respond-to(tablet) {
+        transform: none !important;
+        margin: 0 !important;
+        }
+    }
+}
+
+@mixin icon-img-style{
+    width: 12px;
+    height: 12px;
+}
+
+@mixin swiper-pagination-container {
+    margin-top: $spacing-sm;
+    position: static;
+
+    @media (min-width: 431px) {
+    display: none;
+    }
+}
+@mixin swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: $color-pagination;
+    opacity: 1;
+    &-active{
+    background-color: $color-pagination-active;
+    }
+}
+
+
+@mixin change-btn($icon-url: "assets/toggle.png") {
+  display: none;
+  margin-top: $spacing-sm;
+  margin-left: $spacing-sm;
+  padding: 0;
+  padding-left: $spacing-md;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    left: 0;
+    top: 6px;
+    background: url($icon-url) center/contain no-repeat;
+    transition: transform 0.2s;
+  }
+
+  &--open::before {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: 431px) {
+    display: inline-flex;
+    background-color: $color-bg;
+  }
+
+  @include respond-to(tablet) {
+    display: inline-flex;
+    background-color: $color-bg;
+  }
+}
+
+
+
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: $mobile) {
+      @content;
+    }
+  }
+  @else if $breakpoint == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+  @else if $breakpoint == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+}
+
