@@ -1,5 +1,6 @@
 
 .service-price {
+
     padding: $spacing-sm 0;
     background: $color-bg;
 
@@ -37,7 +38,7 @@
     color: $color-text-secondary;
     background: linear-gradient(to right, $color-bg 0%, $color-white 98.61%);
     padding: $spacing-sm;
-    margin: 0 -(-$spacing-sm) $spacing-sm;
+    margin: 0 (-$spacing-sm) $spacing-sm;
 
     @include respond-to(tablet) {
         padding: $spacing-sm $spacing-md;
@@ -53,9 +54,9 @@
 
 &__slider {
     overflow: hidden;
-    padding: 0 16px;
+    padding: 0 $spacing-sm;
 
-     @include respond-to(tablet) {
+    @include respond-to(tablet) {
         display: none;
     }
 }
@@ -67,17 +68,16 @@
 &__card {
     @include flex-column;
     width: 240px;
-    padding: 16px;
+    padding: $spacing-sm;
     background: $color-white;
     border-radius: 6px;
     box-sizing: border-box;
 }
 
 &__card-title {
-    font-size: $font-size-small;
+    @include footer-text-style;
     font-weight: 400;
     line-height: 18px;
-    color: $color-text-secondary;
     margin: 0 0 12px 0;
     padding-bottom: 12px;
     border-bottom: 1px solid $color-border;
@@ -90,60 +90,164 @@
 }
 
 &__card-row {
-    @include flex-space-between
+    @include flex-space-between;
 }
 
-.service-price__card-label {
+&__card-label {
     @include footer-text-style;
     line-height: 16px;
 }
 
-.service-price__card-value {
+&__card-value {
     font-size: $font-size-small;
     line-height: 18px;
     
 }
 
-.service-price__button {
-    @include flex-space-between;
-
-    width: 119px;
-    height: 32px;
-    padding: 4px 12px 4px 16px;
-    background: #FF3E79;
-    border-radius: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: flex-end;
+&__button {
+    @include action-button-style;
+        width: 119px;
+        align-self: flex-end;
 }
 
-.service-price__button:hover {
-    background: #FF3E79;
-}
-
-.service-price__button-text {
-    font-size: 12px;
-    font-weight: bold;
+&__button-text {
+    font-size: $font-size-xs;
+    font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.2px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $color-white;
 }
 
-.service-price__button-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+&__button-icon { // может тоже миксин добавить?
+    @include flex-center;
     width: 24px;
     height: 24px;
-    background: #FF3E79;
+    background: $color-button;
     border-radius: 50%;
 }
 
-.service-price__button-icon-img {
+&__button-icon-img {
     width: 8px;
     height: 8px;
+}
+
+
+&__table {
+    display: none;
+
+    @include respond-to(tablet) {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      background: $color-white;
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+}
+
+&__table-head {
+    background: $color-bg;
+  }
+
+  &__table-row {
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--header {
+      height: 40px;
+    }
+  }
+
+  &__table-cell {
+    padding: $spacing-sm;
+    @include small-text-style;
+    line-height: 18px;
+    text-align: left;
+
+    @media screen and (min-width: 1024px) {
+      padding: 20px $spacing-md;
+      font-size: $font-size-base;
+      line-height: 24px;
+    }
+
+    &:last-child {
+      text-align: right;
+      width: 150px;
+    }
+
+    &--header {
+        @include small-text-style;
+        line-height: 16px;
+      font-weight: normal;
+      padding: 12px $spacing-sm;
+
+        @media screen and (min-width: 1024px) {
+        font-size: $font-size-base;
+        line-height: 18px;
+        padding: $spacing-sm $spacing-md;
+      }
+    }
+  }
+
+&__disclaimer {
+    padding: $spacing-sm;
+    margin-top: $spacing-sm;
+
+     @include respond-to(tablet) {
+      padding: 0;
+      margin-top: $spacing-md;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-top: $spacing-lg;
+      max-width: 1056px;
+    }
+}
+
+&__disclaimer-text {
+    @include small-text-style;
+    line-height: 20px;
+    margin: 0 0 $spacing-sm 0;
+
+     @include respond-to(tablet) {
+      margin-bottom: $spacing-sm;
+    }
+}
+
+&__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px $spacing-sm;
+    border-radius: 6px;
+
+    &:hover {
+    opacity: 0.7;
+    }
+}
+
+
+&__link-text {
+    @include small-text-style;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 8px;
+}
+
+&__link-icon {
+    @include flex-center;
+    flex-shrink: 0;
+}
+
+&__link-icon-img {
+    width: 8px;
+    height: 12px;
+    object-fit: contain;
+}
 }
 
 .swiper-pagination {
@@ -152,176 +256,4 @@
 
 .swiper-pagination-bullet {
     @include swiper-pagination-bullet;
-}
-
-
-.service-price__table {
-    display: none;
-}
-
-.service-price__disclaimer {
-    padding: 16px;
-    margin-top: 16px;
-}
-
-.service-price__disclaimer-text {
-    font-size: 14px;
-    line-height: 20px;
-    color: #1B1C21;
-    margin: 0 0 16px 0;
-}
-
-.service-price__link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-.service-price__link:hover {
-    opacity: 0.7;
-}
-
-.service-price__link-text {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #1B1C21;
-    margin-right: 8px;
-}
-
-.service-price__link-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.service-price__link-icon-img {
-    width: 8px;
-    height: 12px;
-    object-fit: contain;
-}
-
-@media screen and (min-width: 768px) {
-    .service-price {
-        padding: 24px 24px;
-    }
-
-    .service-price__head {
-        padding: 0;
-        margin-bottom: 24px;
-    }
-
-    .service-price__title {
-        padding: 16px 24px;
-        margin: 0 -24px 24px;
-    }
-    .service-price__slider{
-        display: none;
-    }
-
-    .service-price__table {
-        display: table;
-        width: 100%;
-        border-collapse: collapse;
-        background: #FFFFFF;
-        border-radius: 6px;
-        overflow: hidden;
-    }
-
-    
-    .service-price__table-head {
-        background: #F8F8F8;
-    }
-
-    .service-price__table-row--header {
-        height: 40px;
-    }
-
-    .service-price__table-cell {
-        padding: 16px;
-        font-size: 14px;
-        line-height: 18px;
-        color: #1B1C21;
-        text-align: left;
-    }
-
-    .service-price__table-cell--header {
-        font-size: 14px;
-        line-height: 16px;
-        color: #7E7E82;
-        font-weight: normal;
-        padding: 12px 16px;
-    }
-
-    .service-price__table-row {
-        border-bottom: 1px solid #EAEAEA;
-    }
-
-    .service-price__table-row:last-child {
-        border-bottom: none;
-    }
-
-    .service-price__table-cell:last-child {
-        text-align: right;
-        width: 150px;
-    }
-
-    .service-price__disclaimer {
-        padding: 0;
-        margin-top: 24px;
-    }
-
-    .service-price__disclaimer-text {
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 16px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .service-price {
-        padding: 32px;
-    }
-
-    .service-price__head {
-        margin-bottom: 32px;
-    }
-
-    .service-price__title {
-        padding: 16px 32px;
-        margin: 0 -32px 32px;
-    }
-
-    .service-price__table-cell {
-        padding: 20px 24px;
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .service-price__table-cell--header {
-        font-size: 16px;
-        line-height: 18px;
-        padding: 16px 24px;
-    }
-
-    .service-price__disclaimer {
-        margin-top: 32px;
-        max-width: 1056px;
-    }
-
-    .service-price__disclaimer-text {
-        font-size: 14px;
-        line-height: 20px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .service-price {
-        max-width: 1440px;
-        margin: 0 auto;
-    }
 }

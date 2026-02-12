@@ -24,6 +24,10 @@
   color:$color-text-secondary;
 }
 
+@mixin small-text-style{
+  font-size: $font-size-small;
+  color: $color-text
+}
 
 
 @mixin button-styles($size: 40px){
@@ -79,6 +83,41 @@
     width: 12px;
     height: 12px;
 }
+
+@mixin menu-item-style {
+    height: 40px;
+    padding: 0 $spacing-sm;
+    border-radius: 16px;
+    border: 2px solid $color-accent;
+    color: $color-text-secondary;
+    background-color: $color-white;
+    font-size: $font-size-base;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &--active {
+      border-color: $color-button;
+      color: $color-text;
+    }
+}
+
+@mixin action-button-style {
+    @include flex-space-between;
+    height: 32px;
+    padding: 4px 12px 4px $spacing-sm;
+    background: $color-button;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+}
+
 
 @mixin swiper-pagination-container {
     margin-top: $spacing-sm;
