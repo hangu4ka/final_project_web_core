@@ -14,11 +14,9 @@ const createShowMoreHandler = (
     const isExpanded = container.classList.contains(`${baseClass}--expanded`);
 
     if (isExpanded) {
-      // Сворачиваем: убираем expanded, добавляем collapsed
       container.classList.remove(`${baseClass}--expanded`);
       container.classList.add(`${baseClass}--collapsed`);
     } else {
-      // Разворачиваем: убираем collapsed, добавляем expanded
       container.classList.remove(`${baseClass}--collapsed`);
       container.classList.add(`${baseClass}--expanded`);
     }

@@ -40,19 +40,19 @@
 
     @include respond-to(tablet) {
       max-height: none;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
 
     &--collapsed {
       @media (min-width: 431px) and (max-width: 768px) {
         .service-type__item:nth-child(n + 4) {
-          display: none;
+          display: none !important;
         }
       }
 
       @media (min-width: 769px) {
         .service-type__item:nth-child(n + 5) {
-          display: none;
+          display: none !important;
         }
       }
     }
@@ -131,14 +131,12 @@
     align-items: center;
     justify-content: center;
     align-self: flex-end;
-    flex: 0 0 40px;
     width: 40px;
     height: 40px;
     background-color: #f8f8f8;
     border: 2px solid #ff3e79;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: auto !important;
   }
 
   &__icon-img {
