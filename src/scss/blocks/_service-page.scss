@@ -26,17 +26,15 @@
     gap: 10px;
   }
 
-
-
   &__service-btn,
   &__checkstatus-btn {
     @include button-styles;
-    @include flex-center; 
+    @include flex-center;
   }
 
   &__title {
     position: relative;
-    margin: $spacing-md 0 $spacing-md; 
+    margin: $spacing-md 0 $spacing-md;
     padding-left: 20px;
     font-size: 28px;
     font-weight: 700;
@@ -44,13 +42,13 @@
   }
 
   &__title::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 4px;             
-    height: 100%;          
+    width: 4px;
+    height: 100%;
     border-radius: 2px;
     background-color: $color-accent-secondary;
   }
@@ -93,7 +91,7 @@
       grid-template-columns: 1fr 1fr;
       align-items: start;
       gap: $spacing-lg;
-      align-items: stretch; //растягивает текст, но некрасиво, удалить 
+      align-items: stretch; //растягивает текст, но некрасиво, удалить
     }
   }
 
@@ -101,7 +99,7 @@
     display: flex;
     flex-direction: column;
     min-height: 160px;
-    justify-content: space-between; //прижимаем текст к верху, кнопку внизу, некрасиво, удалить 
+    justify-content: space-between; //прижимаем текст к верху, кнопку внизу, некрасиво, удалить
 
     p {
       margin: 0;
@@ -111,21 +109,21 @@
       letter-spacing: 0.2px;
       flex-grow: 1;
     }
-    &-first{
+    &-first {
       @media (max-width: 767px) {
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
-    }
-      &-second{
+    &-second {
       @media (max-width: 767px) {
-      display:none;
+        display: none;
+      }
     }
   }
-}
 
   &__readmore {
     display: inline-flex;
@@ -168,14 +166,13 @@
 }
 
 .mobile-menu__contacts {
-    display: none;
-    
-    @media (min-width: 768px) {
-      @include flex-center;
-      gap: $spacing-sm;
-    }
-  }
+  display: none;
 
+  @media (min-width: 768px) {
+    @include flex-center;
+    gap: $spacing-sm;
+  }
+}
 
 .separator {
   display: inline-block;

@@ -1,36 +1,34 @@
-
 .service-price {
+  @include basic-style;
 
-    @include basic-style;
+  @include respond-to(tablet) {
+    padding: $spacing-md;
+  }
 
-    @include respond-to(tablet) {
-        padding: $spacing-md;
-    }
+  @media screen and (min-width: 1024px) {
+    padding: $spacing-lg;
+  }
 
-    @media screen and (min-width: 1024px) {
-        padding: $spacing-lg;
-    }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
-    @media screen and (min-width: 1440px) {
-        max-width: 1440px;
-        margin: 0 auto;
-}
-
-&__head {
+  &__head {
     padding: 0 $spacing-sm;
     margin-bottom: $spacing-sm;
 
     @include respond-to(tablet) {
-        padding: 0;
-        margin-bottom: $spacing-md;
+      padding: 0;
+      margin-bottom: $spacing-md;
     }
 
     @media screen and (min-width: 1024px) {
-        margin-bottom: $spacing-lg;
+      margin-bottom: $spacing-lg;
     }
-}
+  }
 
-&__title {
+  &__title {
     @include title-style;
     margin: 0;
     background-color: $color-bg;
@@ -38,38 +36,37 @@
     margin: 0 (-$spacing-sm) $spacing-sm;
 
     @include respond-to(tablet) {
-        padding: $spacing-sm $spacing-md;
-        margin: 0 (-$spacing-md) $spacing-md;
+      padding: $spacing-sm $spacing-md;
+      margin: 0 (-$spacing-md) $spacing-md;
     }
 
     @media screen and (min-width: 1024px) {
-        padding: $spacing-sm $spacing-lg;
-        margin: 0 (-$spacing-lg) $spacing-lg;
+      padding: $spacing-sm $spacing-lg;
+      margin: 0 (-$spacing-lg) $spacing-lg;
     }
-}
+  }
 
-
-&__slider {
+  &__slider {
     overflow: hidden;
     padding: 0 $spacing-sm 40px; // добавляем горизонтальные отступы
-    margin: 0 (-$spacing-md); 
+    margin: 0 (-$spacing-md);
 
     @include respond-to(tablet) {
-    display: none !important;
-    padding: 0;
-    margin: 0;
+      display: none !important;
+      padding: 0;
+      margin: 0;
     }
 
     @include respond-to(desktop) {
-    display: none !important;
+      display: none !important;
     }
-}
+  }
 
-&__list {
+  &__list {
     display: flex;
-}
+  }
 
-&__card {
+  &__card {
     @include flex-column;
     justify-content: space-between;
     width: calc(100% - 32px) !important;
@@ -81,14 +78,14 @@
     min-height: 200px;
     margin-bottom: $spacing-md;
 
-     &.swiper-slide {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
+    &.swiper-slide {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
   }
-}
 
-&__card-title {
+  &__card-title {
     @include footer-text-style;
     font-weight: 500;
     line-height: 18px;
@@ -96,66 +93,65 @@
     margin: 0 0 12px 0;
     padding-bottom: 12px;
     border-bottom: 1px solid none;
-}
+  }
 
-&__card-info {
+  &__card-info {
     @include flex-column;
     gap: $spacing-sm;
     margin-bottom: $spacing-sm;
     flex-grow: 1;
-}
+  }
 
-&__card-row {
+  &__card-row {
     @include flex-column;
     align-items: baseline;
     justify-content: flex-start;
     gap: 4px;
-}
+  }
 
-&__card-label {
+  &__card-label {
     @include footer-text-style;
     line-height: 16px;
     flex-shrink: 0;
+  }
 
-}
-
-&__card-value {
+  &__card-value {
     font-size: $font-size-small;
     line-height: 18px;
     text-align: left;
-}
+  }
 
-&__button {
+  &__button {
     @include action-button-style;
-        width: 119px;
-        align-self: flex-end;
-        margin-top: 0;
-}
+    width: 119px;
+    align-self: flex-end;
+    margin-top: 0;
+  }
 
-&__button-text {
+  &__button-text {
     font-size: $font-size-xs;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.2px;
     text-transform: uppercase;
     color: $color-white;
-}
+  }
 
-&__button-icon { // может тоже миксин добавить?
+  &__button-icon {
+    // может тоже миксин добавить?
     @include flex-center;
     width: 24px;
     height: 24px;
     background: $color-button;
     border-radius: 50%;
-}
+  }
 
-&__button-icon-img {
+  &__button-icon-img {
     width: 8px;
     height: 8px;
-}
+  }
 
-
-&__table {
+  &__table {
     display: none;
 
     @include respond-to(tablet) {
@@ -166,9 +162,9 @@
       border-radius: 16px;
       overflow: hidden;
     }
-}
+  }
 
-&__table-head {
+  &__table-head {
     background: $color-bg;
   }
 
@@ -202,12 +198,12 @@
     }
 
     &--header {
-        @include small-text-style;
-        line-height: 16px;
+      @include small-text-style;
+      line-height: 16px;
       font-weight: normal;
       padding: 12px $spacing-sm;
 
-        @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1024px) {
         font-size: $font-size-base;
         line-height: 18px;
         padding: $spacing-sm $spacing-md;
@@ -215,11 +211,11 @@
     }
   }
 
-&__disclaimer {
+  &__disclaimer {
     padding: $spacing-sm;
     margin-top: $spacing-sm;
 
-     @include respond-to(tablet) {
+    @include respond-to(tablet) {
       padding: 0;
       margin-top: $spacing-md;
     }
@@ -228,19 +224,19 @@
       margin-top: $spacing-lg;
       max-width: 1056px;
     }
-}
+  }
 
-&__disclaimer-text {
+  &__disclaimer-text {
     @include small-text-style;
     line-height: 20px;
     margin: 0 0 $spacing-sm 0;
 
-     @include respond-to(tablet) {
+    @include respond-to(tablet) {
       margin-bottom: $spacing-sm;
     }
-}
+  }
 
-&__link {
+  &__link {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -248,34 +244,33 @@
     border-radius: 6px;
 
     &:hover {
-    opacity: 0.7;
+      opacity: 0.7;
     }
-}
+  }
 
-
-&__link-text {
+  &__link-text {
     @include small-text-style;
     font-weight: 500;
     line-height: 24px;
     margin-right: 8px;
-}
+  }
 
-&__link-icon {
+  &__link-icon {
     @include flex-center;
     flex-shrink: 0;
-}
+  }
 
-&__link-icon-img {
+  &__link-icon-img {
     width: 8px;
     height: 12px;
     object-fit: contain;
-}
+  }
 }
 
 .swiper-pagination {
-    @include swiper-pagination-container;
+  @include swiper-pagination-container;
 }
 
 .swiper-pagination-bullet {
-    @include swiper-pagination-bullet;
+  @include swiper-pagination-bullet;
 }

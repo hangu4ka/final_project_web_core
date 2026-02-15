@@ -1,14 +1,14 @@
-$color-white: #FFFFFF;
-$color-bg: #F8F8F8;
-$color-pagination: #DDDDDD;
-$color-pagination-active: #B5B6BC;
-$color-border: #EAEAEA; 
-$color-text: #1B1C21;
-$color-accent:#B8FFEC;
-$color-accent-secondary: #41F6D7;
-$color-button:#FF3E79; //часть кнопок на странице с таким bg, часть с белым
-$color-text-secondary: #7E7E82; // цвет текста на активных элементах
-$color-logo:  #80949F;
+$color-white: #ffffff;
+$color-bg: #f8f8f8;
+$color-pagination: #dddddd;
+$color-pagination-active: #b5b6bc;
+$color-border: #eaeaea;
+$color-text: #1b1c21;
+$color-accent: #b8ffec;
+$color-accent-secondary: #41f6d7;
+$color-button: #ff3e79; //часть кнопок на странице с таким bg, часть с белым
+$color-text-secondary: #7e7e82; // цвет текста на активных элементах
+$color-logo: #80949f;
 
 $font-family: 'TT Lakes', sans-serif;
 $font-size-large: 28px;
@@ -20,9 +20,7 @@ $mobile: 320px;
 $tablet: 768px;
 $desktop: 1440px; // тут нужно будет попроавить разрешение
 
-
 $spacing-xs: 8px;
 $spacing-sm: 16px;
 $spacing-md: 24px;
 $spacing-lg: 32px;
-

@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,10 +10,10 @@ body {
   color: $color-text;
   line-height: 20px;
   background-color: $color-bg;
-
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 

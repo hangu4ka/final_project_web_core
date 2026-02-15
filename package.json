@@ -19,7 +19,9 @@
     "dev": "webpack --mode development",
     "start": "webpack serve --mode development --open",
     "watch": "webpack --mode development --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format:scss": "prettier --write \"src/**/*.scss\""
   },
   "browserslist": [
     "last 2 versions",

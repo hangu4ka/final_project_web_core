@@ -1,6 +1,16 @@
-const prettier = require('eslint-plugin-prettier')
+const prettier = require('eslint-plugin-prettier');
 
 module.exports = [
+  {
+    ignores: [
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      '**/*.scss',
+      '**/*.css',
+      '**/*.json'
+    ]
+  },
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -15,4 +25,4 @@ module.exports = [
       'semi': ['warn', 'always']
     }
   }
-]
+];
