@@ -24,19 +24,27 @@
   &__policy,
   &__disclaimer {
     @include flex-column;
+
     @include respond-to(tablet) {
       flex: 0 0 auto;
     }
   }
   &__disclaimer {
     @include respond-to(tablet) {
+      max-width: 240px;
+      text-align: right;
+    }
+
+    @include respond-to(desktop) {
       max-width: 300px;
+      text-align: initial;
     }
   }
 
   &__text {
     @include footer-text-style;
     margin: 0;
+    overflow-wrap: break-word;
   }
 
   &__link {

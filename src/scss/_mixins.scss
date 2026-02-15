@@ -1,10 +1,11 @@
 @mixin basic-style {
   padding: $spacing-sm $spacing-sm;
   background: $color-bg;
-
   @media screen and (min-width: 1440px) {
-    max-width: 1440px;
-    margin: 0 auto;
+    & {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
   }
 }
 @mixin flex-center {
@@ -134,6 +135,23 @@
   }
 }
 
+@mixin slide-grid {
+  @media (min-width: 431px) {
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 431px) and (max-width: 768px) {
+    width: calc((100% - 32px) / 3) !important;
+    margin: 0 !important;
+  }
+
+  @media (min-width: 769px) {
+    width: calc((100% - 48px) / 4) !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+}
+
 @mixin swiper-pagination-container {
   margin-top: $spacing-lg;
   position: static;
@@ -188,6 +206,8 @@
   @include respond-to(tablet) {
     display: inline-flex;
     background-color: $color-bg;
+    margin-left: auto;
+    align-self: center;
   }
 }
 

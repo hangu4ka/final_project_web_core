@@ -7,23 +7,23 @@
   }
 
   &__title {
-    margin: 0 0 $spacing-md;
+    margin-bottom: $spacing-md;
     @include title-style;
   }
 
   &__slider {
-    overflow: hidden;
-    padding: 0 16px 40px; // добавляем горизонтальные отступы
-    margin: 0 -16px;
+    overflow: visible;
+    // padding: 0 16px 40px; // добавляем горизонтальные отступы
+    // margin: 0 -16px;
 
     @media (min-width: 431px) {
       overflow: visible;
       padding: 0;
-      margin: 0;
+      // margin: 0;
     }
     &.swiper {
       @include respond-to(tablet) {
-        overflow: visible;
+        overflow: hidden;
         margin-bottom: 20px;
       }
     }
@@ -41,6 +41,9 @@
     @include respond-to(tablet) {
       max-height: none;
       justify-content: flex-start;
+    }
+    @include respond-to(desktop) {
+      justify-content: space-between;
     }
 
     &--collapsed {
@@ -81,9 +84,9 @@
     width: calc(100% - 32px) !important;
     max-width: 320px;
     min-height: 160px;
-    padding: $spacing-sm 20px;
-    font-weight: 500;
+    padding: $spacing-sm $spacing-md;
     margin-bottom: $spacing-lg;
+    font-weight: 500;
 
     @media (min-width: 431px) and (max-width: 768px) {
       width: calc((100% - 32px) / 3) !important;
@@ -104,20 +107,7 @@
     }
 
     &.swiper-slide {
-      @media (min-width: 431px) {
-        flex-shrink: 0;
-      }
-
-      @media (min-width: 431px) and (max-width: 768px) {
-        width: calc((100% - 32px) / 3) !important;
-        margin: 0 !important;
-      }
-
-      @media (min-width: 769px) {
-        width: calc((100% - 48px) / 4) !important;
-        transform: none !important;
-        margin: 0 !important;
-      }
+      @include slide-grid;
     }
   }
 
@@ -127,16 +117,8 @@
   }
 
   &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include white-button-style;
     align-self: flex-end;
-    width: 40px;
-    height: 40px;
-    background-color: #f8f8f8;
-    border: 2px solid #ff3e79;
-    border-radius: 50%;
-    cursor: pointer;
   }
 
   &__icon-img {
@@ -154,9 +136,4 @@
 
 .change-btn {
   @include change-btn;
-
-  @include respond-to(tablet) {
-    margin: 0 0 0 auto;
-    align-self: center;
-  }
 }
