@@ -34,6 +34,16 @@ module.exports = {
       },
 
       // Compile SCSS to CSS
+
+        {
+      test: /\.css$/i,
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'postcss-loader',
+      ],
+    },
+    
       {
         test: /\.scss$/,
         use: [

@@ -1,15 +1,13 @@
 .service-page {
   @include flex-column;
-  min-height: 100vh;
+  @include basic-style;
   padding: 0;
-  margin: 0;
-  background: $color-white;
 
   &__header {
     @include flex-space-between;
     padding: 10px 15px;
     background-color: $color-white;
-    border-bottom: 1px solid $color-logo;
+    border-bottom: 1px solid none;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -24,14 +22,37 @@
   }
 
   &__btn-wrapper {
-    align-items: flex-end;
     display: flex;
-    gap: 30px;
+    gap: 10px;
   }
+
+
 
   &__service-btn,
   &__checkstatus-btn {
     @include button-styles;
+    @include flex-center; 
+  }
+
+  &__title {
+    position: relative;
+    margin: $spacing-md 0 $spacing-md; 
+    padding-left: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: $color-text;
+  }
+
+  &__title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;             
+    height: 100%;          
+    border-radius: 2px;
+    background-color: $color-accent-secondary;
   }
 
   &__menu {
@@ -52,48 +73,109 @@
     min-width: max-content;
 
     @media (min-width: 431px) {
-      justify-content: flex-start;
+      justify-content: space-between;
     }
   }
 
   &__menu-item {
+    @include flex-center;
     @include menu-item-style;
-    width: 246px;
+    width: 230px;
   }
 
   &__content {
     @include flex-column;
     gap: $spacing-sm;
-    margin-top: 10px;
+    margin: $spacing-sm $spacing-md;
 
-    @media (min-width: 431px) {
+    @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: start;
       gap: $spacing-lg;
+      align-items: stretch; //растягивает текст, но некрасиво, удалить 
     }
   }
 
-  &__description p {
-    margin: 0 0 10px;
-    line-height: 1.5;
+  &__description {
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+    justify-content: space-between; //прижимаем текст к верху, кнопку внизу, некрасиво, удалить 
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: $font-size-small;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      flex-grow: 1;
+    }
+    &-first{
+      @media (max-width: 767px) {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    }
+      &-second{
+      @media (max-width: 767px) {
+      display:none;
+    }
   }
+}
 
   &__readmore {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    font-weight: 700;
+    margin-top: $spacing-sm;
+    gap: 8px;
+    font-weight: 500;
     font-size: $font-size-base;
     color: $color-text;
     text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    &--expanded img {
+      transform: rotate(180deg);
+    }
   }
 
-  &__image img {
+  &__image {
     width: 100%;
     border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 }
+
+.mobile-menu__contacts {
+    display: none;
+    
+    @media (min-width: 768px) {
+      @include flex-center;
+      gap: $spacing-sm;
+    }
+  }
+
 
 .separator {
   display: inline-block;

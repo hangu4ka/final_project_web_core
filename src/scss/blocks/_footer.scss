@@ -1,6 +1,5 @@
 .footer{
-    padding: $spacing-sm;
-    background: $color-bg;
+    @include basic-style;
 
     &__container{
     @include flex-column;
@@ -21,7 +20,7 @@
     }
 }
 
-&__copyright, &__policy., &__disclaimer {
+&__copyright, &__policy, &__disclaimer {
     @include flex-column;
     @include respond-to(tablet) {
     flex: 0 0 auto;
@@ -44,5 +43,6 @@
     
     &:hover {
     opacity: 0.7;
+}
 }
 }

@@ -6,9 +6,11 @@
 body {
   font-family: $font-family;
   font-size: $font-size-base;
+  font-weight: 500;
   color: $color-text;
   line-height: 20px;
   background-color: $color-bg;
+
 }
 
 ul, ol {

@@ -7,24 +7,26 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
 />
-<link rel="stylesheet" href="style.css">
-    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <title>Project</title>
 </head>
 
 <body>
-    <aside cl+ass="mobile-menu__fixed">
+    <aside class="mobile-menu__fixed">
+        <div class="mobile-menu__fixed-content">
         <div class="mobile-menu__header">
             <button class="mobile-menu__btn mobile-menu__btn--close">
-                <img src="./src/img/iconX.png">
+                <img src="./img/iconX.png">
             </button>
         <div class="mobile-menu__logo">
-                <img src="./src/img/logo.png" alt="logo">
+                <img src="./img/logo.png" alt="logo">
             </div>
             <button class="mobile-menu__btn mobile-menu__search">
-                <img src="./src/img/icon_search.png">
+                <img src="./img/icon_search.png">
             </button>
         </div>
         <nav class="mobile-menu__nav">
@@ -50,13 +52,13 @@
         <div class="mobile-menu__footer">
             <div class="mobile-menu__contacts">
             <button class="mobile-menu__btn mobile-menu__btn--phone">
-                <img src="./src/img/phone.png">
+                <img src="./img/phone.png">
             </button>
             <button class="mobile-menu__btn mobile-menu__btn--chat">
-                <img src="./src/img/icon.png" alt="icon">
+                <img src="./img/icon.png" alt="icon">
             </button>
             <button class="mobile-menu__btn mobile-menu__btn--profile">
-                <img src="./src/img/Group.png" alt="icon">
+                <img src="./img/Group.png" alt="icon">
             </button>
             </div>
             <a class="mobile-menu__email" href="mailto:mail@cps.com">mail@cps.com</a>
@@ -67,23 +69,36 @@
                 <span class="mobile-menu__lang-item">CH</span>
             </div>
         </div>
+        </div>
     </aside>
 
 
-        <header class="service-page__header">
-            <button class="service-page__menu-btn">
-                <img src="./src/img/icon.png">
+    <div class="service-page">    
+    <header class="service-page__header">
+            <button class="service-page__menu-btn mobile-menu__btn--open">
+                <img src="./img/burger copy.png" alt="menu">
             </button>
             <div class="service-page__logo">
-                <img src="./src/img/logo.png" alt="logo">
+                <img src="./img/logo.png" alt="logo">
             </div>
             <div class="service-page__btn-wrapper">
+            <div class="mobile-menu__contacts">
+            <button class="mobile-menu__btn mobile-menu__btn--phone">
+                <img src="./img/phone.png">
+            </button>
+            <button class="mobile-menu__btn mobile-menu__btn--chat">
+                <img src="./img/icon.png" alt="icon">
+            </button>
+            <button class="mobile-menu__btn mobile-menu__btn--profile">
+                <img src="./img/Group.png" alt="icon">
+            </button>
+            </div>
                 <div class="separator"></div>
                 <button class="service-page__service-btn">
-                <img src="./src/img/Group.png">
+                <img src="./img/Group.png">
                 </button>
                 <button class="service-page__checkstatus-btn">
-                <img src="./src/img/icon_2.png">
+                <img src="./img/icon_2.png">
                 </button>
             </div>
         </header>
@@ -104,123 +119,127 @@
 
             <section class="service-page__content">
                 <div class="service-page__description">
-            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким..</p>
-            <a href="#" class="service-page__readmore"><img src="./src/img/expand.png" alt="icon"> Читать далее</a>
+            <p class="service-page__description-first">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <p class="service-page__description-second">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким..</p>
+            <a href="#" class="service-page__readmore"><img src="./img/expand.png" alt="icon"> Читать далее</a>
                 </div>
                 <div class="service-page__image">
-                <img src="./src/img/_MG_3223.png" alt="CPS">
+                <img src="./img/_MG_3223.png" alt="CPS">
             </div>
             </section>
+            </div>
 
             <section class="brands">
         <div class="brands__head">
         <h2 class="brands__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2> 
         </div>
         <div class="brands__slider swiper">
-            <div class="brands__list swiper-wrapper">
+            <div class="brands__list swiper-wrapper brands__list--collapsed">
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/LENOVO.png" alt="lenovo" class="brands__logo-img">
+                        <img src="./img/LENOVO.png" alt="lenovo" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/SAMSUNG.png" alt="samsung" class="brands__logo-img">
+                        <img src="./img/SAMSUNG.png" alt="samsung" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/APPLE.png" alt="apple" class="brands__logo-img">
+                        <img src="./img/APPLE.png" alt="apple" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/Sonic.png" alt="viewsonic" class="brands__logo-img">
+                        <img src="./img/Sonic.png" alt="viewsonic" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/BOSCH.png" alt="bosch" class="brands__logo-img">
+                        <img src="./img/BOSCH.png" alt="bosch" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/HP.png" alt="hp" class="brands__logo-img">
+                        <img src="./img/HP.png" alt="hp" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/ACER.png" alt="acer" class="brands__logo-img">
+                        <img src="./img/ACER.png" alt="acer" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/sony.png" alt="sony" class="brands__logo-img">
+                        <img src="./img/sony.png" alt="sony" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/LENOVO.png" alt="lenovo" class="brands__logo-img">
+                        <img src="./img/LENOVO.png" alt="lenovo" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/SAMSUNG.png" alt="samsung" class="brands__logo-img">
+                        <img src="./img/SAMSUNG.png" alt="samsung" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="brands__item swiper-slide">
                     <span class="brands__logo">
-                        <img src="./src/img/APPLE.png" alt="apple" class="brands__logo-img">
+                        <img src="./img/APPLE.png" alt="apple" class="brands__logo-img">
                     </span>
                     <span class="brands__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <button class="change-btn">Показать все</button> 
+        <button class="brands__show-more change-btn">
+            <span class="brands__show-more-text">Показать все</span>
+            <span class="brands__show-more-icon"></span>
+        </button> 
         </section>
 
 
@@ -230,12 +249,12 @@
         <h2 class="service-type__title">РЕМОНТ  РАЗЛИЧНЫХ  ВИДОВ  ТЕХНИКИ</h2> 
         </div>
         <div class="service-type__slider swiper">
-            <div class="service-type__list swiper-wrapper">
+            <div class="service-type__list swiper-wrapper service-type__list--collapsed">
 
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт ноутбуков</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
@@ -243,7 +262,7 @@
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт планшетов</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
@@ -251,7 +270,7 @@
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт ПК</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
@@ -259,7 +278,7 @@
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт мониторов</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
@@ -267,7 +286,7 @@
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт ноутбуков</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="brands__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="brands__icon-img">
                     </span>
                 </a>
 
@@ -275,7 +294,7 @@
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт планшетов</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
@@ -283,21 +302,24 @@
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт ПК</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
                 <a href="#" class="service-type__item swiper-slide">
                     <span class="service-type__type">Ремонт мониторов</span>
                     <span class="service-type__icon">
-                        <img src="./src/img/dropdown.png" alt="icon" class="service-type__icon-img">
+                        <img src="./img/dropdown.png" alt="icon" class="service-type__icon-img">
                     </span>
                 </a>
 
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <button class="change-btn">Показать все</button> 
+        <button class="service-type__show-more change-btn">
+            <span class="service-type__show-more-text">Показать все</span>
+            <span class="service-type__show-more-icon"></span>
+        </button>
         </section>
 
 
@@ -312,18 +334,18 @@
                     <h3 class="service-price__card-title">Диагностика</h3>
                     <div class="service-price__card-info">
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Цена:</span>
+                            <span class="service-price__card-label">Цена</span>
                             <span class="service-price__card-value">Бесплатно</span>
                         </div>
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Срок:</span>
+                            <span class="service-price__card-label">Срок</span>
                             <span class="service-price__card-value">30 мин</span>
                         </div>
                     </div>
                     <button class="service-price__button">
                         <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                         <span class="service-price__button-icon">
-                            <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                            <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                         </span>
                     </button>
                 </div>
@@ -332,18 +354,18 @@
                     <h3 class="service-price__card-title">Замена дисплея</h3>
                     <div class="service-price__card-info">
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Цена:</span>
+                            <span class="service-price__card-label">Цена</span>
                             <span class="service-price__card-value">1 000 ₽</span>
                         </div>
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Срок:</span>
+                            <span class="service-price__card-label">Срок</span>
                             <span class="service-price__card-value">30-120 мин</span>
                         </div>
                     </div>
                     <button class="service-price__button">
                         <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                         <span class="service-price__button-icon">
-                            <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                            <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                         </span>
                     </button>
                 </div>
@@ -352,18 +374,18 @@
                     <h3 class="service-price__card-title">Замена полифонического динамика</h3>
                     <div class="service-price__card-info">
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Цена:</span>
+                            <span class="service-price__card-label">Цена</span>
                             <span class="service-price__card-value">1 000 ₽</span>
                         </div>
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Срок:</span>
+                            <span class="service-price__card-label">Срок</span>
                             <span class="service-price__card-value">30-120 мин</span>
                         </div>
                     </div>
                     <button class="service-price__button">
                         <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                         <span class="service-price__button-icon">
-                            <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                            <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                         </span>
                     </button>
                 </div>
@@ -372,18 +394,18 @@
                     <h3 class="service-price__card-title">Тестирование с выдачей технического заключения</h3>
                     <div class="service-price__card-info">
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Цена:</span>
+                            <span class="service-price__card-label">Цена</span>
                             <span class="service-price__card-value">1 000 ₽</span>
                         </div>
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Срок:</span>
+                            <span class="service-price__card-label">Срок</span>
                             <span class="service-price__card-value">30-120 мин</span>
                         </div>
                     </div>
                     <button class="service-price__button">
                         <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                         <span class="service-price__button-icon">
-                            <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                            <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                         </span>
                     </button>
                 </div>
@@ -392,18 +414,18 @@
                     <h3 class="service-price__card-title">Замена программного обеспечения</h3>
                     <div class="service-price__card-info">
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Цена:</span>
+                            <span class="service-price__card-label">Цена</span>
                             <span class="service-price__card-value">1 000 ₽</span>
                         </div>
                         <div class="service-price__card-row">
-                            <span class="service-price__card-label">Срок:</span>
+                            <span class="service-price__card-label">Срок</span>
                             <span class="service-price__card-value">30-120 мин</span>
                         </div>
                     </div>
                     <button class="service-price__button">
                         <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                         <span class="service-price__button-icon">
-                            <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                            <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                         </span>
                     </button>
                 </div>
@@ -429,7 +451,7 @@
                         <button class="service-price__button">
                             <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                             <span class="service-price__button-icon">
-                                <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                                <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                             </span>
                         </button>
                     </td>
@@ -443,7 +465,7 @@
                         <button class="service-price__button">
                             <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                             <span class="service-price__button-icon">
-                                <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                                <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                             </span>
                         </button>
                     </td>
@@ -457,7 +479,7 @@
                         <button class="service-price__button">
                             <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                             <span class="service-price__button-icon">
-                                <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                                <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                             </span>
                         </button>
                     </td>
@@ -471,7 +493,7 @@
                         <button class="service-price__button">
                             <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                             <span class="service-price__button-icon">
-                                <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                                <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                             </span>
                         </button>
                     </td>
@@ -485,7 +507,7 @@
                         <button class="service-price__button">
                             <span class="service-price__button-text">ЗАКАЗАТЬ</span>
                             <span class="service-price__button-icon">
-                                <img src="./src/img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
+                                <img src="./img/dropdown_white.png" alt="icon" class="service-price__button-icon-img">
                             </span>
                         </button>
                     </td>
@@ -499,7 +521,7 @@
             <a href="#" class="service-price__link">
                 <span class="service-price__link-text">Получить коммерческое предложение</span>
                 <span class="service-price__link-icon"> 
-                    <img src="./src/img/line.png" alt="icon" class="service-price__link-icon-img">
+                    <img src="./img/line.png" alt="icon" class="service-price__link-icon-img">
                 </span>
             </a>
         </div>
@@ -524,6 +546,5 @@
         </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="./js/index.js"></script>
 </body>
 </html>

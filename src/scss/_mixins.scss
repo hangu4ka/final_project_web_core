@@ -1,6 +1,12 @@
-@use "variables" as *;
-
-
+@mixin basic-style{
+  padding: $spacing-sm $spacing-sm;
+  background: $color-bg;
+  
+   @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
 @mixin flex-center{
   display: flex;
   align-items: center;
@@ -22,6 +28,17 @@
 @mixin footer-text-style{
   font-size: $font-size-small;
   color:$color-text-secondary;
+}
+
+@mixin title-style{
+  font-size: $font-size-base;
+  color: $color-text-secondary;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+@mixin menu-item-style{
+  font-size: $font-size-base;
 }
 
 @mixin small-text-style{
@@ -46,7 +63,7 @@
 }
 
 @mixin white-button-style{
-  @include flex-center();
+  @include flex-center;
   flex: 0 0 40px;
   width: 40px;
   height: 40px;
@@ -57,8 +74,7 @@
 }
 
 @mixin item-style {
-    @include flex-space-between;
-    width: 240px;
+    @include flex-column;
     padding: $spacing-sm $spacing-md;
     background-color: $color-white;
     border-radius: 6px;
@@ -87,10 +103,10 @@
 @mixin menu-item-style {
     height: 40px;
     padding: 0 $spacing-sm;
-    border-radius: 16px;
-    border: 2px solid $color-accent;
+    border-radius: 6px;
+    border: 2px solid none;
     color: $color-text-secondary;
-    background-color: $color-white;
+    background-color: $color-bg;
     font-size: $font-size-base;
     font-weight: 500;
     cursor: pointer;
@@ -98,8 +114,8 @@
 
     &:hover,
     &--active {
-      border-color: $color-button;
-      color: $color-text;
+      border: 2px solid $color-accent;
+      background-color: $color-white;
     }
 }
 
@@ -120,7 +136,7 @@
 
 
 @mixin swiper-pagination-container {
-    margin-top: $spacing-sm;
+    margin-top: $spacing-lg;
     position: static;
 
     @media (min-width: 431px) {
@@ -138,7 +154,7 @@
 }
 
 
-@mixin change-btn($icon-url: "assets/toggle.png") {
+@mixin change-btn($icon-url: "../../src/img/toggle.png") {
   display: none;
   margin-top: $spacing-sm;
   margin-left: $spacing-sm;
