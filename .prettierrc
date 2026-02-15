@@ -6,7 +6,7 @@
   "quoteProps": "preserve",
   "arrowParens": "always",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
+  "bracketSameLine": true,
   "proseWrap": "never",
   "htmlWhitespaceSensitivity": "strict",
   "endOfLine": "lf"
