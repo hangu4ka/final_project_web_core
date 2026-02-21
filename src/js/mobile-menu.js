@@ -22,6 +22,25 @@ const initMenu = () => {
       body.style.overflow = '';
     }
   });
+
+  menuOpenBtn.addEventListener('click', () => {
+    menu.classList.add('mobile-menu__fixed--open');
+    if (window.innerWidth < 1440) {
+      body.style.overflow = 'hidden';
+    }
+  });
+
+  menuCloseBtn.addEventListener('click', () => {
+    menu.classList.remove('mobile-menu__fixed--open');
+    body.style.overflow = '';
+  });
+
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu && window.innerWidth < 1440) {
+      menu.classList.remove('mobile-menu__fixed--open');
+      body.style.overflow = '';
+    }
+  });
 };
 
 export default initMenu;

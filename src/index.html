@@ -16,7 +16,39 @@
 </head>
 
 <body>
-    <aside class="mobile-menu__fixed">
+        <div class="service-page">    
+    <header class="service-page__header">
+            <button class="service-page__menu-btn mobile-menu__btn--open">
+                <img src="./img/burger copy.png" alt="menu">
+            </button>
+            <div class="service-page__logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="service-page__btn-wrapper">
+            <div class="mobile-menu__contacts">
+            <button class="mobile-menu__btn mobile-menu__btn--phone">
+                <img src="./img/phone.png">
+            </button>
+            <button class="mobile-menu__btn mobile-menu__btn--chat">
+                <img src="./img/icon.png" alt="icon">
+            </button>
+            <button class="mobile-menu__btn mobile-menu__btn--profile">
+                <img src="./img/Group.png" alt="icon">
+            </button>
+            </div>
+                <div class="separator"></div>
+                <button class="service-page__service-btn">
+                <img src="./img/Group.png">
+                </button>
+                <button class="service-page__checkstatus-btn">
+                <img src="./img/icon_2.png">
+                </button>
+            </div>
+        </header>
+
+        <div class="service-page__layout">
+            
+            <aside class="mobile-menu__fixed">
         <div class="mobile-menu__fixed-content">
         <div class="mobile-menu__header">
             <button class="mobile-menu__btn mobile-menu__btn--close">
@@ -72,54 +104,24 @@
         </div>
     </aside>
 
-
-    <div class="service-page">    
-    <header class="service-page__header">
-            <button class="service-page__menu-btn mobile-menu__btn--open">
-                <img src="./img/burger copy.png" alt="menu">
-            </button>
-            <div class="service-page__logo">
-                <img src="./img/logo.png" alt="logo">
-            </div>
-            <div class="service-page__btn-wrapper">
-            <div class="mobile-menu__contacts">
-            <button class="mobile-menu__btn mobile-menu__btn--phone">
-                <img src="./img/phone.png">
-            </button>
-            <button class="mobile-menu__btn mobile-menu__btn--chat">
-                <img src="./img/icon.png" alt="icon">
-            </button>
-            <button class="mobile-menu__btn mobile-menu__btn--profile">
-                <img src="./img/Group.png" alt="icon">
-            </button>
-            </div>
-                <div class="separator"></div>
-                <button class="service-page__service-btn">
-                <img src="./img/Group.png">
-                </button>
-                <button class="service-page__checkstatus-btn">
-                <img src="./img/icon_2.png">
-                </button>
-            </div>
-        </header>
-
-
         <main class="service-page__main">
-             <header class="service-page__header-main">
-            <button class="service-page__menu-btn mobile-menu__btn--open">
-                <img src="./img/burger copy.png" alt="menu">
-            </button>
+            <div class="service-page__head">
             <h2 class="service-page__title">Услуги и сервисы</h2>
             <div class="service-page__btn-wrapper">
-                <button class="service-page__service-btn">
-                <img src="./img/Group.png">
-                </button>
-
-                <button class="service-page__checkstatus-btn">
-                <img src="./img/icon_2.png">
-                </button>
+                <div class="service-page__btn-group">
+                    <span class="service-page__btn-label">Оставить заявку</span>
+                    <button class="service-page__service-btn">
+                    <img src="./img/Group.png">
+                    </button>
+                </div>
+                <div class="service-page__btn-group">
+                    <span class="service-page__btn-label">Статус ремонта</span>
+                    <button class="service-page__checkstatus-btn">
+                    <img src="./img/icon_2.png">
+                    </button>
+                </div>
             </div>
-        </header>
+            </div>
             
             <nav class="service-page__menu">
                 <div class="service-page__menu-wrapper">
@@ -142,7 +144,6 @@
                 <img src="./img/MG_3223.png" alt="CPS">
             </div>
             </section>
-            </div>
 
             <section class="brands">
         <div class="brands__head">
@@ -255,11 +256,9 @@
             <span class="brands__show-more-text">Показать все</span>
             <span class="brands__show-more-icon"></span>
         </button> 
-        </section>
+            </section>
 
-
-
-        <section class="service-type">
+            <section class="service-type">
         <div class="service-type__head">
         <h2 class="service-type__title">РЕМОНТ  РАЗЛИЧНЫХ  ВИДОВ  ТЕХНИКИ</h2> 
         </div>
@@ -335,10 +334,10 @@
             <span class="service-type__show-more-text">Показать все</span>
             <span class="service-type__show-more-icon"></span>
         </button>
-        </section>
+            </section>
 
 
-        <section class="service-price">
+            <section class="service-price">
         <div class="service-price__head">
             <h2 class="service-price__title">ЦЕНЫ НА УСЛУГИ</h2> 
         </div>
@@ -540,12 +539,9 @@
                 </span>
             </a>
         </div>
-    </section>
+            </section>
 
-
-        </main>
-
-        <footer class="footer">
+            <footer class="footer">
             <div class="footer__container">
                 <div class="footer__copyright">
                     <p class="footer__text">© 2019 CPS</p>
@@ -558,8 +554,11 @@
                     <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
                 </div>
             </div>
-        </footer>
+            </footer>
+        </main>
+        </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 </html>

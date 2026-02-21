@@ -48,7 +48,7 @@
 
   &__slider {
     overflow: hidden;
-    padding: 0 $spacing-sm 40px; // добавляем горизонтальные отступы
+    padding: 0 $spacing-sm 40px;
     margin: 0 (-$spacing-md);
 
     @include respond-to(tablet) {

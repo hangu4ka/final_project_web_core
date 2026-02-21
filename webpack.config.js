@@ -5,9 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // Entry file
-  entry: [
-    './src/js/index.js'
-  ],
+  entry: ['./src/js/index.js'],
 
   // Output file
   output: {
@@ -16,7 +14,7 @@ module.exports = {
   },
 
   // Source maps for easier debugging
-  devtool: "source-map",
+  devtool: 'source-map',
 
   module: {
     rules: [
@@ -28,30 +26,26 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['@babel/preset-env']
           }
         }
       },
 
       // Compile SCSS to CSS
 
-        {
-      test: /\.css$/i,
-      use: [
-        MiniCssExtractPlugin.loader,
-        'css-loader',
-        'postcss-loader',
-      ],
-    },
-    
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+      },
+
       {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
           'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
-        ],
+          'sass-loader' // compiles Sass to CSS, using Node Sass by default
+        ]
       },
 
       // Include fonts from css
@@ -70,8 +64,8 @@ module.exports = {
         generator: {
           filename: 'static/[name][ext]'
         }
-      },
-    ],
+      }
+    ]
   },
   plugins: [
     // Include html file, styles and scripts will be automatically injected
@@ -81,13 +75,13 @@ module.exports = {
       inject: true,
       minify: {
         removeComments: true,
-        collapseWhitespace: false,
+        collapseWhitespace: false
       }
     }),
 
     // Extract styles to a separate file
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: 'style.css'
     }),
 
     // Copy images
@@ -95,8 +89,8 @@ module.exports = {
       patterns: [
         {
           from: './src/img',
-          to: 'img',
-        },
+          to: 'img'
+        }
       ]
     })
   ],
@@ -106,10 +100,13 @@ module.exports = {
     port: 9000,
     hot: true, // Enable Hot Module Replacement
     watchFiles: {
-      paths: ['src/**/*'], // Watch for changes in source files
+      paths: ['src/**/*'] // Watch for changes in source files
     },
     client: {
-      overlay: true // Show errors and warnings in the browser
+      overlay: {
+        warnings: false,
+        errors: true
+      }
     }
-  },
+  }
 };

@@ -2,12 +2,11 @@
   padding: $spacing-sm $spacing-sm;
   background: $color-bg;
   @media screen and (min-width: 1440px) {
-    & {
-      max-width: 1440px;
-      margin: 0 auto;
-    }
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
+
 @mixin flex-center {
   display: flex;
   align-items: center;
