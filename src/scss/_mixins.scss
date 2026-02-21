@@ -81,17 +81,26 @@
   border-radius: 6px;
   border: 1px solid $color-border;
   box-sizing: border-box;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-lg;
 
-  @media (min-width: 431px) and (max-width: 768px) {
-    width: calc(33.333% - 11px);
-  }
   @include respond-to(tablet) {
-    width: calc(25% - 12px);
+    width: auto !important;
+    max-width: none;
+    margin-bottom: 0;
   }
+
   &.swiper-slide {
+    @media (max-width: 430px) {
+      width: 80%;
+      max-width: 320px;
+      @include slide-grid;
+    }
     @include respond-to(tablet) {
-      transform: none !important;
+      width: auto !important;
       margin: 0 !important;
+      transform: none !important;
     }
   }
 }

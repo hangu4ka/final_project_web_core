@@ -5,12 +5,16 @@
 
   &__header {
     @include flex-space-between;
-    padding: 10px 15px;
+    padding: $spacing-xs;
     background-color: $color-white;
     border-bottom: 1px solid none;
     position: sticky;
     top: 0;
     z-index: 10;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
   }
 
   &__menu-btn {
@@ -24,6 +28,25 @@
   &__btn-wrapper {
     display: flex;
     gap: 10px;
+  }
+
+  &__service-btn,
+  &__checkstatus-btn {
+    @include button-styles;
+    @include flex-center;
+  }
+
+  &__header-main {
+    display: none;
+
+    @include respond-to(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu-btn {
+    @include button-styles;
   }
 
   &__service-btn,

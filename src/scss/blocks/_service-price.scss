@@ -240,7 +240,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px $spacing-sm;
+    padding: 10px 0;
     border-radius: 6px;
 
     &:hover {
@@ -249,7 +249,7 @@
   }
 
   &__link-text {
-    @include small-text-style;
+    font-size: $font-size-base;
     font-weight: 500;
     line-height: 24px;
     margin-right: 8px;

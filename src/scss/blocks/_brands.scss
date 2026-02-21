@@ -11,7 +11,7 @@
   }
 
   &__slider {
-    overflow: visible;
+    overflow: hidden;
 
     @media (min-width: 431px) {
       overflow: hidden;
@@ -27,21 +27,24 @@
 
   &__list {
     display: flex;
-    max-height: 170px;
-    overflow: hidden;
 
     @include respond-to(tablet) {
-      max-height: 350px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: $spacing-sm;
-      justify-content: space-between;
+      max-height: 350px;
+      overflow: hidden;
     }
+
     @include respond-to(desktop) {
-      &::after {
-        content: '';
-        flex: 0 0 calc((100% - (3 * #{$spacing-sm})) / 4);
-        height: 0;
-        visibility: hidden;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.swiper-wrapper {
+      @include respond-to(tablet) {
+        display: grid !important;
+        transform: none !important;
+        flex-wrap: unset;
       }
     }
 
@@ -61,63 +64,14 @@
 
     &--expanded {
       max-height: none;
-
-      @media (min-width: 431px) and (max-width: 768px) {
-        .brands__item {
-          display: flex !important;
-          flex-direction: column !important;
-        }
-      }
-
-      @include respond-to(desktop) {
-        .brands__item {
-          display: flex !important;
-          flex-direction: column !important;
-        }
-      }
-    }
-
-    &.swiper-wrapper {
-      @include respond-to(tablet) {
-        transform: none !important;
-        flex-wrap: wrap;
-      }
     }
   }
 
   &__item {
     @include item-style;
     display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between;
-    width: calc(100% - 32px) !important;
-    max-width: 320px;
-    align-items: flex-start;
     min-height: 120px;
     flex-shrink: 0;
-    margin-bottom: $spacing-lg;
-
-    @media (min-width: 431px) and (max-width: 768px) {
-      width: calc((100% - 32px) / 3) !important;
-
-      &:nth-child(-n + 3) {
-        display: flex !important;
-        flex-direction: column !important;
-      }
-    }
-
-    @media (min-width: 769px) {
-      width: calc((100% - (3 * 16px)) / 4) !important;
-
-      &:nth-child(-n + 4) {
-        display: flex !important;
-        flex-direction: column !important;
-      }
-    }
-
-    &.swiper-slide {
-      @include slide-grid;
-    }
   }
 
   &__logo {

@@ -12,11 +12,7 @@
       justify-content: space-between;
       align-items: flex-start;
       text-align: left;
-      padding: $spacing-md;
-    }
-
-    @include respond-to(desktop) {
-      padding: $spacing-lg;
+      padding: $spacing-sm;
     }
   }
 

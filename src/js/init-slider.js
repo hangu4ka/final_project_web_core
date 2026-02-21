@@ -11,19 +11,26 @@ const initResponsiveSlider = (sliderSelector, paginationSelector) => {
       swiperInstance = new Swiper(sliderSelector, {
         slidesPerView: 'auto',
         spaceBetween: 16,
+        grabCursor: true,
+        touchRatio: 1,
+        resistanceRatio: 0.85,
         pagination: {
           el: paginationSelector,
           clickable: true
         }
       });
     } else if (!isMobile && swiperInstance) {
-      swiperInstance.destroy(true, true); // ⬅️ уничтожает Swiper на десктопе
+      swiperInstance.destroy(true, true);
       swiperInstance = null;
     }
   };
 
   initSwiper();
-  window.addEventListener('resize', initSwiper);
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initSwiper, 150);
+  });
 };
 
 export default initResponsiveSlider;
