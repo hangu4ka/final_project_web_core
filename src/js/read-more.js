@@ -1,10 +1,11 @@
 const initReadMore = () => {
   const description = document.querySelector('.service-page__description');
-  const button = document.querySelector('.service-page__read-more');
+  const button = document.querySelector('.service-page__readmore');
 
   if (!button || !description) return;
 
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
     description.classList.toggle('service-page__description--expanded');
 
     const isExpanded = description.classList.contains(
