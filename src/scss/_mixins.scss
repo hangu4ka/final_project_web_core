@@ -1,5 +1,5 @@
 @mixin basic-style {
-  padding: $spacing-sm $spacing-sm;
+  padding: $spacing-xs $spacing-sm;
   background: $color-bg;
   @media screen and (min-width: 1440px) {
     max-width: 1440px;
